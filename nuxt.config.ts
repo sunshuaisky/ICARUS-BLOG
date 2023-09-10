@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "Icarus.Sun's Blog",
+    },
+  },
   devtools: { enabled: true },
   srcDir: 'src/',
   css: ['~/assets/styles/main.css'],

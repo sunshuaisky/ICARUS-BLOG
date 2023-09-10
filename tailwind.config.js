@@ -9,11 +9,17 @@ module.exports = {
     "./src/app.vue",
   ],
   theme: {
-    extend: {},
     extend: {
       colors: {
-        dark: "#16171a",
+        'light': '#e0e5ec',
+        'dark': "#16171a",
       },
+      height: {
+        '90vh': '90vh',
+      },
+      borderRadius: {
+        '20': '20px',
+      }
     },
   },
   plugins: [],

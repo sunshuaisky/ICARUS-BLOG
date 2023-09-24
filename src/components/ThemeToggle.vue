@@ -1,13 +1,15 @@
 <template>
   <div
-    class="theme-switch scale-[0.25] h-[65vh] flex flex-col justify-center items-center"
+    class="scale-[0.25] flex flex-col justify-center items-center absolute right-[30px] top-[30px]"
   >
     <button
       type="button"
-      class="switch bg-white dark:bg-black border-none w-[16vw] h-[8vw] rounded-[4vw] absolute cursor-pointer"
+      class="bg-white dark:bg-black border-none w-[210px] h-[110px] rounded-[110px] absolute cursor-pointer animate-clickOff-0.5s"
       @click="isDark = !isDark"
     >
-      <i class="bx bxs-sun absolute z-10 top-[22%] left-[13%]">
+      <i
+        class="absolute z-10 top-[23px] left-[23px] animate-shakeOn-0.7s dark:animate-shakeOff-0.7s"
+      >
         <svg
           t="1684833132212"
           className="icon"
@@ -30,9 +32,11 @@
           ></path></svg
       ></i>
       <span
-        class="btn-switch bg-cyan-200 block w-[6vw] h-[6vw] rounded-[3vw] absolute z-0 top-[13%] right-auto left-[9%] dark:left-auto dark:right-[9%]"
+        class="bg-cyan-200 block w-[80px] h-[80px] rounded-[80px] absolute z-0 top-[15px] right-auto left-[15px] dark:left-auto dark:right-[15px] animate-animationClickOn-0.7s dark:animate-animationClickOff-0.7s"
       ></span>
-      <i class="bx bxs-moon absolute z-10 top-[22%] right-[13%]">
+      <i
+        class="absolute z-10 top-[23px] right-[23px] animate-rotateOn-0.7s dark:animate-rotateOff-0.7s"
+      >
         <svg
           t="1684833077751"
           className="icon"
@@ -68,10 +72,6 @@ const isDark = computed({
 <style lang="scss" scoped>
 .theme-switch {
   &--light {
-    .btn-switch {
-      animation: animationClickOn 0.7s;
-    }
-
     .bxs-moon {
       animation: rotateOn 0.7s;
     }
@@ -82,10 +82,6 @@ const isDark = computed({
   }
 
   &--dark {
-    .btn-switch {
-      animation: animationClickOff 0.7s;
-    }
-
     .bxs-moon {
       animation: rotateOff 0.7s;
     }
@@ -94,69 +90,8 @@ const isDark = computed({
       animation: shakeOff 0.7s;
     }
   }
-
-  .switch {
-    animation: clickOff 0.5s;
-  }
 }
 // animations
-@keyframes clickOff {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes clickOn {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes shakeOff {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-
-  40% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-
-  50% {
-    transform: scale3d(0.85, 1.15, 1);
-  }
-
-  65% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-
-  75% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
 
 @keyframes shakeOn {
   0% {

@@ -7,8 +7,9 @@
       src="@/assets/images/bg.jpg"
     />
     <div
-      class="bg-light dark:bg-dark w-5/6 h-[90vh] flex overflow-hidden shadow-2xl rounded-[20px] opacity-95 z-10"
+      class="bg-light dark:bg-dark w-5/6 h-[90vh] flex overflow-hidden shadow-2xl rounded-[20px] opacity-95 z-10 relative"
     >
+      <ThemeToggle />
       <slot />
     </div>
   </div>
